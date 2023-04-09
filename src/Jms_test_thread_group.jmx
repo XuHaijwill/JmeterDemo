@@ -16,13 +16,13 @@
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
-          <stringProp name="LoopController.loops">1</stringProp>
+          <intProp name="LoopController.loops">-1</intProp>
         </elementProp>
-        <stringProp name="ThreadGroup.num_threads">10</stringProp>
-        <stringProp name="ThreadGroup.ramp_time">60</stringProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">2</stringProp>
         <boolProp name="ThreadGroup.scheduler">true</boolProp>
-        <stringProp name="ThreadGroup.duration">60</stringProp>
-        <stringProp name="ThreadGroup.delay">10</stringProp>
+        <stringProp name="ThreadGroup.duration">1</stringProp>
+        <stringProp name="ThreadGroup.delay">2</stringProp>
         <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
       </ThreadGroup>
       <hashTree>
@@ -35,7 +35,157 @@
           <boolProp name="JMSSampler.useReqMsgIdAsCorrelId">false</boolProp>
           <stringProp name="JMSSampler.timeout">2000</stringProp>
           <stringProp name="JMSSampler.jmsNumberOfSamplesToAggregate"></stringProp>
-          <stringProp name="HTTPSamper.xml_data">msg - 1</stringProp>
+          <stringProp name="HTTPSamper.xml_data">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;jmeterTestPlan version=&quot;1.2&quot; properties=&quot;5.0&quot; jmeter=&quot;5.4.3&quot;&gt;
+  &lt;hashTree&gt;
+    &lt;TestPlan guiclass=&quot;TestPlanGui&quot; testclass=&quot;TestPlan&quot; testname=&quot;Test Plan&quot; enabled=&quot;true&quot;&gt;
+      &lt;stringProp name=&quot;TestPlan.comments&quot;&gt;${__time(,)}&lt;/stringProp&gt;
+      &lt;boolProp name=&quot;TestPlan.functional_mode&quot;&gt;false&lt;/boolProp&gt;
+      &lt;boolProp name=&quot;TestPlan.tearDown_on_shutdown&quot;&gt;true&lt;/boolProp&gt;
+      &lt;boolProp name=&quot;TestPlan.serialize_threadgroups&quot;&gt;false&lt;/boolProp&gt;
+      &lt;elementProp name=&quot;TestPlan.user_defined_variables&quot; elementType=&quot;Arguments&quot; guiclass=&quot;ArgumentsPanel&quot; testclass=&quot;Arguments&quot; testname=&quot;User Defined Variables&quot; enabled=&quot;true&quot;&gt;
+        &lt;collectionProp name=&quot;Arguments.arguments&quot;/&gt;
+      &lt;/elementProp&gt;
+      &lt;stringProp name=&quot;TestPlan.user_define_classpath&quot;&gt;&lt;/stringProp&gt;
+    &lt;/TestPlan&gt;
+    &lt;hashTree&gt;
+      &lt;ThreadGroup guiclass=&quot;ThreadGroupGui&quot; testclass=&quot;ThreadGroup&quot; testname=&quot;Jms Test Thread Group&quot; enabled=&quot;true&quot;&gt;
+        &lt;stringProp name=&quot;ThreadGroup.on_sample_error&quot;&gt;continue&lt;/stringProp&gt;
+        &lt;elementProp name=&quot;ThreadGroup.main_controller&quot; elementType=&quot;LoopController&quot; guiclass=&quot;LoopControlPanel&quot; testclass=&quot;LoopController&quot; testname=&quot;Loop Controller&quot; enabled=&quot;true&quot;&gt;
+          &lt;boolProp name=&quot;LoopController.continue_forever&quot;&gt;false&lt;/boolProp&gt;
+          &lt;stringProp name=&quot;LoopController.loops&quot;&gt;1&lt;/stringProp&gt;
+        &lt;/elementProp&gt;
+        &lt;stringProp name=&quot;ThreadGroup.num_threads&quot;&gt;10&lt;/stringProp&gt;
+        &lt;stringProp name=&quot;ThreadGroup.ramp_time&quot;&gt;60&lt;/stringProp&gt;
+        &lt;boolProp name=&quot;ThreadGroup.scheduler&quot;&gt;true&lt;/boolProp&gt;
+        &lt;stringProp name=&quot;ThreadGroup.duration&quot;&gt;60&lt;/stringProp&gt;
+        &lt;stringProp name=&quot;ThreadGroup.delay&quot;&gt;10&lt;/stringProp&gt;
+        &lt;boolProp name=&quot;ThreadGroup.same_user_on_next_iteration&quot;&gt;true&lt;/boolProp&gt;
+      &lt;/ThreadGroup&gt;
+      &lt;hashTree&gt;
+        &lt;JMSSampler guiclass=&quot;JMSSamplerGui&quot; testclass=&quot;JMSSampler&quot; testname=&quot;JMS Point-to-Point&quot; enabled=&quot;true&quot;&gt;
+          &lt;stringProp name=&quot;JMSSampler.queueconnectionfactory&quot;&gt;ConnectionFactory&lt;/stringProp&gt;
+          &lt;stringProp name=&quot;JMSSampler.SendQueue&quot;&gt;Q.REQ&lt;/stringProp&gt;
+          &lt;stringProp name=&quot;JMSSampler.ReceiveQueue&quot;&gt;Q.RPL&lt;/stringProp&gt;
+          &lt;intProp name=&quot;JMSSampler.communicationStyle&quot;&gt;0&lt;/intProp&gt;
+          &lt;boolProp name=&quot;JMSSampler.isNonPersistent&quot;&gt;false&lt;/boolProp&gt;
+          &lt;boolProp name=&quot;JMSSampler.useReqMsgIdAsCorrelId&quot;&gt;false&lt;/boolProp&gt;
+          &lt;stringProp name=&quot;JMSSampler.timeout&quot;&gt;2000&lt;/stringProp&gt;
+          &lt;stringProp name=&quot;JMSSampler.jmsNumberOfSamplesToAggregate&quot;&gt;&lt;/stringProp&gt;
+          &lt;stringProp name=&quot;HTTPSamper.xml_data&quot;&gt;msg - 1&lt;/stringProp&gt;
+          &lt;stringProp name=&quot;JMSSampler.initialContextFactory&quot;&gt;org.apache.activemq.jndi.ActiveMQInitialContextFactory&lt;/stringProp&gt;
+          &lt;stringProp name=&quot;JMSSampler.contextProviderUrl&quot;&gt;tcp://192.168.0.109:61616&lt;/stringProp&gt;
+          &lt;elementProp name=&quot;JMSSampler.jndiProperties&quot; elementType=&quot;Arguments&quot; guiclass=&quot;ArgumentsPanel&quot; testclass=&quot;Arguments&quot; testname=&quot;User Defined Variables&quot; enabled=&quot;true&quot;&gt;
+            &lt;collectionProp name=&quot;Arguments.arguments&quot;&gt;
+              &lt;elementProp name=&quot;queue.Q.REQ&quot; elementType=&quot;Argument&quot;&gt;
+                &lt;stringProp name=&quot;Argument.name&quot;&gt;queue.Q.REQ&lt;/stringProp&gt;
+                &lt;stringProp name=&quot;Argument.value&quot;&gt;example.A&lt;/stringProp&gt;
+                &lt;stringProp name=&quot;Argument.metadata&quot;&gt;=&lt;/stringProp&gt;
+              &lt;/elementProp&gt;
+              &lt;elementProp name=&quot;queue.Q.RPL&quot; elementType=&quot;Argument&quot;&gt;
+                &lt;stringProp name=&quot;Argument.name&quot;&gt;queue.Q.RPL&lt;/stringProp&gt;
+                &lt;stringProp name=&quot;Argument.value&quot;&gt;example.B&lt;/stringProp&gt;
+                &lt;stringProp name=&quot;Argument.metadata&quot;&gt;=&lt;/stringProp&gt;
+              &lt;/elementProp&gt;
+            &lt;/collectionProp&gt;
+          &lt;/elementProp&gt;
+          &lt;elementProp name=&quot;arguments&quot; elementType=&quot;JMSProperties&quot;&gt;
+            &lt;collectionProp name=&quot;JMSProperties.properties&quot;&gt;
+              &lt;elementProp name=&quot;&quot; elementType=&quot;JMSProperty&quot;&gt;
+                &lt;stringProp name=&quot;JMSProperty.name&quot;&gt;JMSCorrelationId&lt;/stringProp&gt;
+                &lt;stringProp name=&quot;JMSProperty.value&quot;&gt;MessgID-${__time(,)}&lt;/stringProp&gt;
+                &lt;stringProp name=&quot;JMSProperty.type&quot;&gt;java.lang.String&lt;/stringProp&gt;
+              &lt;/elementProp&gt;
+              &lt;elementProp name=&quot;&quot; elementType=&quot;JMSProperty&quot;&gt;
+                &lt;stringProp name=&quot;JMSProperty.name&quot;&gt;type&lt;/stringProp&gt;
+                &lt;stringProp name=&quot;JMSProperty.value&quot;&gt;SMS&lt;/stringProp&gt;
+                &lt;stringProp name=&quot;JMSProperty.type&quot;&gt;java.lang.String&lt;/stringProp&gt;
+              &lt;/elementProp&gt;
+            &lt;/collectionProp&gt;
+          &lt;/elementProp&gt;
+          &lt;stringProp name=&quot;JMSSampler.priority&quot;&gt;5&lt;/stringProp&gt;
+        &lt;/JMSSampler&gt;
+        &lt;hashTree&gt;
+          &lt;ResultCollector guiclass=&quot;ViewResultsFullVisualizer&quot; testclass=&quot;ResultCollector&quot; testname=&quot;View Results Tree&quot; enabled=&quot;true&quot;&gt;
+            &lt;boolProp name=&quot;ResultCollector.error_logging&quot;&gt;false&lt;/boolProp&gt;
+            &lt;objProp&gt;
+              &lt;name&gt;saveConfig&lt;/name&gt;
+              &lt;value class=&quot;SampleSaveConfiguration&quot;&gt;
+                &lt;time&gt;true&lt;/time&gt;
+                &lt;latency&gt;true&lt;/latency&gt;
+                &lt;timestamp&gt;true&lt;/timestamp&gt;
+                &lt;success&gt;true&lt;/success&gt;
+                &lt;label&gt;true&lt;/label&gt;
+                &lt;code&gt;true&lt;/code&gt;
+                &lt;message&gt;true&lt;/message&gt;
+                &lt;threadName&gt;true&lt;/threadName&gt;
+                &lt;dataType&gt;true&lt;/dataType&gt;
+                &lt;encoding&gt;false&lt;/encoding&gt;
+                &lt;assertions&gt;true&lt;/assertions&gt;
+                &lt;subresults&gt;true&lt;/subresults&gt;
+                &lt;responseData&gt;false&lt;/responseData&gt;
+                &lt;samplerData&gt;false&lt;/samplerData&gt;
+                &lt;xml&gt;false&lt;/xml&gt;
+                &lt;fieldNames&gt;true&lt;/fieldNames&gt;
+                &lt;responseHeaders&gt;false&lt;/responseHeaders&gt;
+                &lt;requestHeaders&gt;false&lt;/requestHeaders&gt;
+                &lt;responseDataOnError&gt;false&lt;/responseDataOnError&gt;
+                &lt;saveAssertionResultsFailureMessage&gt;true&lt;/saveAssertionResultsFailureMessage&gt;
+                &lt;assertionsResultsToSave&gt;0&lt;/assertionsResultsToSave&gt;
+                &lt;bytes&gt;true&lt;/bytes&gt;
+                &lt;sentBytes&gt;true&lt;/sentBytes&gt;
+                &lt;url&gt;true&lt;/url&gt;
+                &lt;threadCounts&gt;true&lt;/threadCounts&gt;
+                &lt;idleTime&gt;true&lt;/idleTime&gt;
+                &lt;connectTime&gt;true&lt;/connectTime&gt;
+              &lt;/value&gt;
+            &lt;/objProp&gt;
+            &lt;stringProp name=&quot;filename&quot;&gt;&lt;/stringProp&gt;
+          &lt;/ResultCollector&gt;
+          &lt;hashTree/&gt;
+        &lt;/hashTree&gt;
+        &lt;ResultCollector guiclass=&quot;StatVisualizer&quot; testclass=&quot;ResultCollector&quot; testname=&quot;Aggregate Report&quot; enabled=&quot;true&quot;&gt;
+          &lt;boolProp name=&quot;ResultCollector.error_logging&quot;&gt;false&lt;/boolProp&gt;
+          &lt;objProp&gt;
+            &lt;name&gt;saveConfig&lt;/name&gt;
+            &lt;value class=&quot;SampleSaveConfiguration&quot;&gt;
+              &lt;time&gt;true&lt;/time&gt;
+              &lt;latency&gt;true&lt;/latency&gt;
+              &lt;timestamp&gt;true&lt;/timestamp&gt;
+              &lt;success&gt;true&lt;/success&gt;
+              &lt;label&gt;true&lt;/label&gt;
+              &lt;code&gt;true&lt;/code&gt;
+              &lt;message&gt;true&lt;/message&gt;
+              &lt;threadName&gt;true&lt;/threadName&gt;
+              &lt;dataType&gt;true&lt;/dataType&gt;
+              &lt;encoding&gt;false&lt;/encoding&gt;
+              &lt;assertions&gt;true&lt;/assertions&gt;
+              &lt;subresults&gt;true&lt;/subresults&gt;
+              &lt;responseData&gt;false&lt;/responseData&gt;
+              &lt;samplerData&gt;false&lt;/samplerData&gt;
+              &lt;xml&gt;false&lt;/xml&gt;
+              &lt;fieldNames&gt;true&lt;/fieldNames&gt;
+              &lt;responseHeaders&gt;false&lt;/responseHeaders&gt;
+              &lt;requestHeaders&gt;false&lt;/requestHeaders&gt;
+              &lt;responseDataOnError&gt;false&lt;/responseDataOnError&gt;
+              &lt;saveAssertionResultsFailureMessage&gt;true&lt;/saveAssertionResultsFailureMessage&gt;
+              &lt;assertionsResultsToSave&gt;0&lt;/assertionsResultsToSave&gt;
+              &lt;bytes&gt;true&lt;/bytes&gt;
+              &lt;sentBytes&gt;true&lt;/sentBytes&gt;
+              &lt;url&gt;true&lt;/url&gt;
+              &lt;threadCounts&gt;true&lt;/threadCounts&gt;
+              &lt;idleTime&gt;true&lt;/idleTime&gt;
+              &lt;connectTime&gt;true&lt;/connectTime&gt;
+            &lt;/value&gt;
+          &lt;/objProp&gt;
+          &lt;stringProp name=&quot;filename&quot;&gt;&lt;/stringProp&gt;
+        &lt;/ResultCollector&gt;
+        &lt;hashTree/&gt;
+      &lt;/hashTree&gt;
+    &lt;/hashTree&gt;
+  &lt;/hashTree&gt;
+&lt;/jmeterTestPlan&gt;
+</stringProp>
           <stringProp name="JMSSampler.initialContextFactory">org.apache.activemq.jndi.ActiveMQInitialContextFactory</stringProp>
           <stringProp name="JMSSampler.contextProviderUrl">tcp://192.168.0.109:61616</stringProp>
           <elementProp name="JMSSampler.jndiProperties" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
