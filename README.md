@@ -211,11 +211,46 @@ JMeter聚合报告中响应时间的单位是毫秒（ms）
 
 ![image-20230410094059523](docs\imgs\image-20230410094059523.png)
 
+Ramp-Up: 多长时间用户全部启动
+
+循环次数 若选择永远： 一般和调度器配置配合使用： 持续时间 - 脚本持续运行时间 启动延迟 - 脚本等多久开始执行
+
 控制线程组运行顺序（并发或者执行完下一个）
 
 ![image-20230410094441098](docs\imgs\image-20230410094441098.png)
 
+## HTTP请求：
+
+```
+参数介绍：
+作用：向服务器发送http及https请求
+参数：
+```
+
+![image-20230410095930907](docs\imgs\image-20230410095930907.png)
+
+# 案例
+
+案例分析： 
+
+（5）使用1个线程组，添加HTTP请求（百度） 配置线程数为2，循环次数为3时，运行观察结果 
+
+​          配置线程数为3，循环次数为2时，运行观察结果，对比是否有不同 
+
+相同点：从请求数量来说，是完全相同的 
+
+不同点：场景不同 线程数：代表用户数，即性能测试时的负载量（线程数为2比线程数为3对应的负载量小）
+
+ 循环次数：代表时间，即性能测试时的运行时间（循环次数3比循环次数2对应的时间长）
+
+
+
 # FAQ
+
+## Jmeter右上角不显示线程数和运行时间
+https://www.cnblogs.com/LucasMeng/p/17208063.html
+
+在GUI界面去修改的语言这样就会出现这样的bug
 
 ## Cannot instantiate class: org.apache.activemq.jndi.ActiveMQInitialContextFactory [Root exception is java.lang.ClassNotFoundException: org.apache.activemq.jndi.ActiveMQInitialContextFactory
 https://activemq.apache.org/jndi-support.html
