@@ -51,7 +51,7 @@ E:\sources\git\github\javaCodeGuid\javaBase\src\main\java\org\example\jms\JmsCon
 - [Jmeter 学习路线](https://www.cnblogs.com/poloyy/p/15257716.html)
 - [Jmeter模拟RocketMQ生产者消息发送](https://blog.csdn.net/C343500263/article/details/120532664)
 
-# Jmeter 学习
+# 性能测试 - Jmeter
 
 - https://bbs.itheima.com/thread-405757-1-1.html
 - https://www.bilibili.com/video/BV1ty4y1q72g/?p=2&spm_id_from=pageDriver&vd_source=c102ec68c51d3f8673e6ec1b0c5f195b
@@ -72,6 +72,62 @@ E:\sources\git\github\javaCodeGuid\javaBase\src\main\java\org\example\jms\JmsCon
 ![image-20230409220359257](docs\imgs\image-20230409220359257.png)
 
 JMeter聚合报告中响应时间的单位是毫秒（ms）
+
+## 性能测试课程总体目标
+
+1. 什么是性能
+
+   - 时间
+
+   - 资源
+
+2. 性能测试
+
+3. 什么是基准测试
+
+4. 基准测试的用途
+
+5. 稳定性测试：
+
+   - 在服务器稳定运行（用户正常的业务负载下）的情况下进行长时间测试（1天-1周等），并最终保证服务器能满足线上的业务需求
+   - 系统在用户要求的业务负载下运行达到规定的时间时，西永才能正式上线使用
+
+   ![image-20230410084727853](docs\imgs\image-20230410084727853.png)
+
+![image-20230410084750973](docs\imgs\image-20230410084750973.png)
+
+6. 压力测试
+
+   - 在请负载下的测试，查看系统在峰值的情况下是否功能隐患、系统是否具有良好的容错能力和客恢复能力
+
+   - 测试场景：
+
+     ```
+     极限负载情况下的破坏性压力测试
+     高负载下的长时间的稳定性压力测试
+     第一种：极限负载情况下的破坏性压力测试（C-D区间）
+     第二种：高负载下的长时间稳定性压力测试（B-C区间）
+     ```
+
+7. 并发测试：
+   - 并发测试（绝对并发）：是指在极端的时间内，发送多个请求，来验证服务器对并发的处理能力
+   - 应用场景：如抢红包，秒杀，抢购等
+
+## 性能测试指标
+
+定义：从客户端发送请求，到客户端收到服务器响应的总时间
+
+组成：网络传输时间+服务器处理时间
+
+![image-20230410085407540](docs\imgs\image-20230410085407540.png)
+
+## 性能测试用例
+
+![image-20230410085522309](docs\imgs\image-20230410085522309.png)
+
+## 性能测试工具
+
+
 
 # FAQ
 
