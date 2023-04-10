@@ -51,7 +51,7 @@ E:\sources\git\github\javaCodeGuid\javaBase\src\main\java\org\example\jms\JmsCon
 - [Jmeter 学习路线](https://www.cnblogs.com/poloyy/p/15257716.html)
 - [Jmeter模拟RocketMQ生产者消息发送](https://blog.csdn.net/C343500263/article/details/120532664)
 
-# 性能测试 - Jmeter
+# 性能测试
 
 - https://bbs.itheima.com/thread-405757-1-1.html
 - https://www.bilibili.com/video/BV1ty4y1q72g/?p=2&spm_id_from=pageDriver&vd_source=c102ec68c51d3f8673e6ec1b0c5f195b
@@ -121,13 +121,99 @@ JMeter聚合报告中响应时间的单位是毫秒（ms）
 
 ![image-20230410085407540](docs\imgs\image-20230410085407540.png)
 
-## 性能测试用例
+### 吞吐量
+
+1. 什么是吞吐量
+
+   ```
+   指的是单位时间内处理的客户端请求数量。直接体现软件系统的性能承载能力
+   ```
+
+2. 吞吐量的单位有哪些
+
+   ```
+   从业务角度： 业务数/天、访问人数/天、页面访问量/天
+   从网络角度： 字节数/小时、字节数/天
+   从技术指标： 每秒查询数（QPS）、每秒事务数（TPS）
+   ```
+
+3. QPS和TPS有什么关系
+
+   ```
+   事务，即业务。一个事务可以对应一个请求，多个请求
+   一个事务对应一个请求时： TPS = QPS
+   一个事务对应n个请求时： QPS = n * TPS
+   ```
+
+### 点击数
+
+### 错误率
+
+```
+指系统在负载情况下，失败的业务概率
+注意：
+	错误率是性能指标，是高负载下的失败业务的概率
+	随机bug是功能bug，先解决随机bug才能进行性能测试
+```
+
+### 资源利用率
+
+![image-20230410091454647](docs\imgs\image-20230410091454647.png)
+
+## 性能测试的流程
+
+![image-20230410091657796](docs\imgs\image-20230410091657796.png)
+
+### 需求分析
+
+![image-20230410091633281](docs\imgs\image-20230410091633281.png)
+
+### 性能测试计划
+
+- 测试的目的和范围 
+
+- 测试人员和分工 
+
+- 测试时间安排 
+
+- 测试的方法
+
+### 性能测试用例
 
 ![image-20230410085522309](docs\imgs\image-20230410085522309.png)
 
 ## 性能测试工具
 
+- Loadrunner
+- Jmeter
 
+![image-20230410090547759](docs\imgs\image-20230410090547759.png)
+
+#  Jmeter
+
+## Jmeter语言修改
+
+![image-20230410092207564](docs\imgs\image-20230410092207564.png)
+
+永久修改：jmeter.propertie -> #language=en
+
+## 元件执行顺序：
+
+同一作用域下的不同元件：
+
+配置元件 - 前置处理程序 - 定时器 - 取样器 - 后置处理程序 - 断言 - 监听器
+
+同一作用域下相同元件： 从上到下的顺序依次执行
+
+![image-20230410093958326](docs\imgs\image-20230410093958326.png)
+
+## 线程参数说明
+
+![image-20230410094059523](docs\imgs\image-20230410094059523.png)
+
+控制线程组运行顺序（并发或者执行完下一个）
+
+![image-20230410094441098](docs\imgs\image-20230410094441098.png)
 
 # FAQ
 
