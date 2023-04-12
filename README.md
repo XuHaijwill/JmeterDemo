@@ -336,7 +336,15 @@ JSON提取器： 提取JSON格式的响应数据
 
 ![image-20230412093027677](docs\imgs\image-20230412093027677.png)
 
+### json提取器
 
+![image-20230412093422926](docs\imgs\image-20230412093422926.png)
+
+### JMeter属性
+
+![image-20230412093557582](docs\imgs\image-20230412093557582.png)
+
+![image-20230412093621019](docs\imgs\image-20230412093621019.png)
 
 # 案例分析
 
