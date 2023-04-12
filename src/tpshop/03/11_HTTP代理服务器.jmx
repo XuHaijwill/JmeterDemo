@@ -13,7 +13,7 @@
     </TestPlan>
     <hashTree>
       <ProxyControl guiclass="ProxyControlGui" testclass="ProxyControl" testname="HTTP代理服务器" enabled="true">
-        <stringProp name="ProxyControlGui.port">33210</stringProp>
+        <stringProp name="ProxyControlGui.port">8899</stringProp>
         <collectionProp name="ProxyControlGui.exclude_list">
           <stringProp name="1357198033">.*.css</stringProp>
           <stringProp name="1357204655">.*.jpg</stringProp>
