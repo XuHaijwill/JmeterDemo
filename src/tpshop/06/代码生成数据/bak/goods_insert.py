@@ -1,7 +1,7 @@
 #导包
 import pymysql
 #建立连接
-conn = pymysql.connect(host="192.168.91.134",user="litemall",password="litemall123456",database="litemall",port=3306,charset='utf8')
+conn = pymysql.connect(host="192.168.0.106",user="litemall",password="litemall123456",database="litemall",port=3306,charset='utf8')
 #建立游标
 cursor = conn.cursor()
 #编写SQL语句
