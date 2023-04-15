@@ -8,7 +8,10 @@
 
 ![image-20230415205603417](docs\imgs\image-20230415205603417.png)
 
+put it into `lib/ext` directory, then restart JMeter.
+
 # Jms test
+
 [JMeter JMS Point-to-Point Sampler with ActiveMQ](https://stackoverflow.com/questions/59733419/jmeter-jms-point-to-point-sampler-with-activemq)
 
 https://www.blazemeter.com/blog/jmeter-load-testing
@@ -680,7 +683,15 @@ Concurrency Thread Group线程组：
 添加查看结果树
 ```
 
+# 扩展知识点
+
 [Jmeter调用Python脚本实现参数互相传递的实现](https://blog.csdn.net/yufen9987/article/details/120167070)
+
+[Jmeter调用Python脚本实现参数互相传递的实现](https://www.jb51.net/article/204577.htm)
+
+[详解Jmeter中的BeanShell脚本](https://www.jb51.net/article/232200.htm)
+
+# Jmeter调用Python脚本实现参数互相传递的实现
 
 # FAQ
 

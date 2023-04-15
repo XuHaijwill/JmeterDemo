@@ -1,0 +1,1 @@
+python E:\sources\git\github\JmeterDemo\src\tpshop\jmeterCallPy\JmeterParamsDataCreate.py %1
