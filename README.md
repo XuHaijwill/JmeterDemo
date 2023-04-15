@@ -693,15 +693,51 @@ https://cloud.tencent.com/developer/article/1581252
 
 ## Widows 安装
 
+```
 cd C:\Users\zuiwo\AppData\Local\Programs\Python\Python38\Scripts
 
+./pip3.exe install locustio
 
+cd C:\Users\zuiwo\AppData\Local\Programs\Python\Python38\Scripts
+
+ .\locust.exe -f D:\sources\git\gitee\python-study\pythonProject\loucst_demo.py
+```
+
+![image-20230415230229983](docs\imgs\image-20230415230229983.png)
+
+
+
+![image-20230415230259681](docs\imgs\image-20230415230259681.png)
+
+定义locust类： 用户类，通过用户来执行定义好的任务集
+
+![image-20230415230334726](docs\imgs\image-20230415230334726.png)
+
+### 访问
+
+```
+http://localhost:8089/
+```
+
+### 启动压测执行
+
+Locust执行测试时系统指标的监控
+
+![image-20230415230605066](docs\imgs\image-20230415230605066.png)
+
+![image-20230415230622692](docs\imgs\image-20230415230622692.png)
+
+```
+其他的资源监控界面：
+charts：记录吞吐量QPS、响应时间、并发数，按照时间的统计情况
+Failures：性能测试脚本在执行失败后的记录（断言失败）
+Exceptions：脚本出现异常
+Download Data：提供下载前面各个部分的性能指标数据
+```
 
 ### 解决python3.7+locust1.0性能测试报错
 
 https://blog.csdn.net/DaisyCold/article/details/108261611
-
-
 
 # 扩展知识点
 
