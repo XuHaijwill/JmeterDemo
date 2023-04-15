@@ -700,7 +700,9 @@ cd C:\Users\zuiwo\AppData\Local\Programs\Python\Python38\Scripts
 
 cd C:\Users\zuiwo\AppData\Local\Programs\Python\Python38\Scripts
 
- .\locust.exe -f D:\sources\git\gitee\python-study\pythonProject\loucst_demo.py
+.\locust.exe -f D:\sources\git\gitee\python-study\pythonProject\loucst_demo.py 
+or
+.\locust.exe -f E:\sources\git\github\JmeterDemo\src\tpshop\Locust_perf\locust2_demo.py
 ```
 
 ![image-20230415230229983](docs\imgs\image-20230415230229983.png)
