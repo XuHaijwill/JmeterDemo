@@ -2,6 +2,12 @@
 
 [下载地址](https://dlcdn.apache.org//jmeter/binaries/)
 
+## 组件下载
+
+[Documentation :: JMeter-Plugins.org](https://jmeter-plugins.org/wiki/Start/)
+
+![image-20230415205603417](docs\imgs\image-20230415205603417.png)
+
 # Jms test
 [JMeter JMS Point-to-Point Sampler with ActiveMQ](https://stackoverflow.com/questions/59733419/jmeter-jms-point-to-point-sampler-with-activemq)
 
@@ -673,6 +679,8 @@ Concurrency Thread Group线程组：
 添加HTTP请求 - 支付，使用counter函数传入不同金额的测试数据
 添加查看结果树
 ```
+
+[Jmeter调用Python脚本实现参数互相传递的实现](https://blog.csdn.net/yufen9987/article/details/120167070)
 
 # FAQ
 
