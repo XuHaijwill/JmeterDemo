@@ -683,6 +683,26 @@ Concurrency Thread Group线程组：
 添加查看结果树
 ```
 
+# Locust
+
+https://www.locust.io/
+
+## python3安装locust说明
+
+https://cloud.tencent.com/developer/article/1581252
+
+## Widows 安装
+
+cd C:\Users\zuiwo\AppData\Local\Programs\Python\Python38\Scripts
+
+
+
+### 解决python3.7+locust1.0性能测试报错
+
+https://blog.csdn.net/DaisyCold/article/details/108261611
+
+
+
 # 扩展知识点
 
 [Jmeter调用Python脚本实现参数互相传递的实现](https://blog.csdn.net/yufen9987/article/details/120167070)
