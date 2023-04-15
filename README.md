@@ -687,3 +687,7 @@ https://activemq.apache.org/jndi-support.html
 add activemq-all.jar dependency to /lib/ext folder of the JMeter,
 
 https://stackoverflow.com/questions/41600180/cannot-instantiate-class-org-apache-activemq-jndi-activemqinitialcontextfactory
+
+## Jmeter导入jmx文件报错CannotResolveClassException: kg.apc.jmeter.perfmon.PerfMonCollector 解决办法
+https://blog.csdn.net/qq_35779794/article/details/111033963
+https://jmeter-plugins.org/install/Install/
