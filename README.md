@@ -756,7 +756,9 @@ https://blog.csdn.net/DaisyCold/article/details/108261611
 ## Jmeter右上角不显示线程数和运行时间
 https://www.cnblogs.com/LucasMeng/p/17208063.html
 
+```
 在GUI界面去修改的语言这样就会出现这样的bug
+```
 
 ## Cannot instantiate class: org.apache.activemq.jndi.ActiveMQInitialContextFactory [Root exception is java.lang.ClassNotFoundException: org.apache.activemq.jndi.ActiveMQInitialContextFactory
 https://activemq.apache.org/jndi-support.html
